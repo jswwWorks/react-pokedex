@@ -9,10 +9,10 @@ import Pokecard from "./Pokecard";
  *
  *  Renders a sequence of Pokecard components.
  */
-function Pokedex({ pokemons }) {
+function Pokedex({ hand }) {
   return (
     <ul>
-      {pokemons.map(p => <Pokecard pokemon={p}/>)}
+      {hand.map(p => <Pokecard pokemon={p}/>)}
     </ul>
   );
 }

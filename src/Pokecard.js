@@ -14,7 +14,6 @@ const POKEMON_API_BASE_URL = "https://raw.githubusercontent.com/PokeAPI";
  *
  */
 function Pokecard({ pokemon }) {
-
   const pokemonURL = `/sprites/master/sprites/pokemon/${pokemon.id}.png`;
 
   return (
