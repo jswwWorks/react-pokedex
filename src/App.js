@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Pokedex from './Pokedex';
 
-const pokecards = [
+const POKEMONS = [
   {id: 4,   name: 'Charmander', type: 'fire',     base_experience: 62},
   {id: 7,   name: 'Squirtle',   type: 'water',    base_experience: 63},
   {id: 11,  name: 'Metapod',    type: 'bug',      base_experience: 72},
@@ -16,9 +16,13 @@ const pokecards = [
 function App() {
   return (
     <div className="App">
-      <Pokedex pokecards={pokecards}/>
+      <Pokedex pokemons={POKEMONS}/>
     </div>
   );
 }
 
 export default App;
+
+// Questions for code review
+// 1) capitalization of POKEMONS constant across multiple files?
+// 2) Unique key prop warning from console -- should it be divs rather than ul?
