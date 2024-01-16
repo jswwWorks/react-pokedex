@@ -9,11 +9,18 @@ import Pokecard from "./Pokecard";
  *
  *  Renders a sequence of Pokecard components.
  */
-function Pokedex({ hand }) {
+function Pokedex({ hand, experience, isWinner }) {
+
+  const winnerMessage = isWinner ? `You win, with ${experience}exp!` : null;
+
   return (
-    <ul>
-      {hand.map(p => <Pokecard pokemon={p}/>)}
-    </ul>
+
+    <div>
+      <ul>
+        {hand.map(p => <Pokecard pokemon={p}/>)}
+      </ul>
+    <h2>{winnerMessage}</h2>
+    </div>
   );
 }
 
